@@ -1,0 +1,6 @@
+<h4>編集</h4>
+<%= form_for (@tweet) do |f|  %>
+  <%= f.text_area :text, placeholder: '投稿内容', size: "30x30" %>
+  <br>
+  <%= f.submit "更新" %>
+<% end %>

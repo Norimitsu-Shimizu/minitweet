@@ -1,0 +1,22 @@
+<div class="col s12 m7">
+    <div class="card horizontal">
+      <div class="card-image">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><%= tweet.text %></p>
+        </div>
+        <div class="card-content">
+          <p><%= tweet.user.name %></p>
+        </div>
+        <% if user_signed_in? && tweet.user_id == current_user.id %>
+        <li>
+          <%= link_to "編集", "/tweets/#{tweet.id}/edit" %>
+        </li>
+        <li>
+          <%= link_to "削除", "/tweets/#{tweet.id}", method: :delete %>
+        </li>
+      <% end %>
+      </div>
+    </div>
+</div>
